@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa2.sourcelead.com/" />
+<title>Requirement</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Requirement</td></tr>
+</thead><tbody>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Requirement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>loop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add Requirement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jobTitle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=jobTitle</td>
+	<td>Job 00${a}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=jobId</td>
+	<td>New_Req_00${a}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=positions</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//*[@id='education_chosen']/ul/li/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//*[@id='education_chosen']/div/ul/li[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>2</td>
+	<td>q</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>qualifiction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//*[@id='education_chosen']/ul/li[${q}]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=//*[@id='education_chosen']/div/ul/li[${q}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['q']=${q}+1</td>
+	<td></td>
+</tr>
+<!--Total 49 Education-->
+<tr>
+	<td>gotoIf</td>
+	<td>${q}&lt;=49</td>
+	<td>qualifiction</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=minExp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=minExp</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=maxExp</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=rate</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='requirement_form']/div/div/div[3]/div[6]/div/div/div[2]/div/div/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rateType</td>
+	<td>label=Hourly</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//input[@value='Select Some Options'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[10]/div/div/div/ul/li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>2</td>
+	<td>s</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>skills</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>xpath=(//input[@value='Select Some Options'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='skills_chosen']/div/ul/li[${s}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['s']=${s}+1</td>
+	<td></td>
+</tr>
+<!--total 466 skills-->
+<tr>
+	<td>gotoIf</td>
+	<td>${s}&lt;=466</td>
+	<td>skills</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=description</td>
+	<td>description description description description description description description description description description description description description description description description description description description description description description description description description description description </td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[4]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[2]/div[4]/div/div/div/ul/li[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=assignedTo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=147</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#userList &gt; div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[13]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Urgent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=priority</td>
+	<td>label=Urgent</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[2]/div[7]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[7]/div/div/div/ul/li[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['a'] = ${a}+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>loop</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

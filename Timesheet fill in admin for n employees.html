@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.sourcelead.com/" />
+<title>Timesheet fill in admin for n employees</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Timesheet fill in admin for n employees</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>2</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>SelectEmployee</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[1]/section/div/div/div/div[2]/div/div[50]/table/tbody/tr[${a}]/td[3]/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>2</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>TimeonDay</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>xpath=html/body/div[1]/div[11]/div/form/div[2]/div[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td[${b}]/div/input</td>
+	<td>05:05</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=html/body/div[1]/div[11]/div/form/div[2]/div[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td[${b}]/div/div/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['b']=${b}+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${b}&lt;=7</td>
+	<td>TimeonDay</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=weekComment</td>
+	<td>Message of the week</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['a']=${a}+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${b}==8</td>
+	<td>SelectEmployee</td>
+</tr>
+</tbody></table>
+</body>
+</html>

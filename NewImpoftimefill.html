@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa.sourcelead.com/" />
+<title>Timefill</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Timefill</td></tr>
+</thead><tbody>
+<tr>
+	<td>label</td>
+	<td>loop2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.addtaskfield</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>loop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>30</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>b</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>c</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>loop1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['a'] = ${a}+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>id=1submission${a}timeSheetDay1Id</td>
+	<td>IsPresent</td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${IsPresent}==false</td>
+	<td>loop1</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>loop4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${c}&gt;1</td>
+	<td>loop2</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>loop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>id=${c}submission${a}timeSheetDay${b}Id</td>
+	<td>01:13</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=${c}submission${a}comment${b}Id</td>
+	<td>${c} Message of day ${b}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['b'] = ${b}+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${b}&lt;=7</td>
+	<td>loop</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['b'] = ${b}-7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['c'] = ${c}+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${c}&lt;=5</td>
+	<td>loop4</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=//*[@id='weekComment']</td>
+	<td>This message of the week</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>attach</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-plus</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['z']=${z}+1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${z}&lt;=5</td>
+	<td>attach</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=0docFile</td>
+	<td>D:\SourceLead\Timesheet Uploads\Attachment.csv</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=1docFile</td>
+	<td>D:\SourceLead\Timesheet Uploads\Attachment.docx</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=2docFile</td>
+	<td> D:\SourceLead\Timesheet Uploads\Attachment.html</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=3docFile</td>
+	<td>D:\SourceLead\Timesheet Uploads\Attachment.pdf</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=4docFile</td>
+	<td>D:\SourceLead\Timesheet Uploads\Attachment.zip</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=5docFile</td>
+	<td>D:\SourceLead\Timesheet Uploads\Attachment.png</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=6docFile</td>
+	<td>D:\SourceLead\Timesheet Uploads\Attachment.xlsx</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Submit']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
